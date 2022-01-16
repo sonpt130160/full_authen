@@ -1,12 +1,12 @@
 
-const registerRouter = require('./register')
+// const registerRouter = require('./register')
 const siteRouter = require('./site')
 
 
 function route(app){
 
 
-    app.use('/register',registerRouter)
+    // app.use('/register',registerRouter)
     
     
     app.use('/',siteRouter)

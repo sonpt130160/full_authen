@@ -11,12 +11,13 @@ const authentication = new Schema({
     email: {type: String, required: true,},
     password: {type: String, required: true,},
   }, {
+    _id: false,
     timestamps: true,
   });
 
   mongoose.plugin(slug);
 
-  // full_authen.plugin(AutoIncrement)
+  authentication.plugin(AutoIncrement);
 
   authentication.plugin(mongooseDelete, { 
           deleteAt : true,

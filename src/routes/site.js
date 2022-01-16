@@ -5,7 +5,10 @@ const siteController = require('..\\app\\controllers\\SiteController')
 
 
 
-router.get('/', siteController.index)
+router.get('/read', siteController.read)
+router.post('/create', siteController.create)
+router.put('/edit/:id', siteController.edit)
+router.delete('/delete/:id', siteController.delete)
 
 
 
